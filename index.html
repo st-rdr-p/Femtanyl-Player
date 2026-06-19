@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Femtanyl Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <h1>Femtanyl Player</h1>
+    <p class="subtitle">Your offline MP3 collection.</p>
+
+    <section id="loaderSection" class="loader-panel">
+      <label class="file-button" for="fileInput">Choose MP3 files</label>
+      <input id="fileInput" type="file" accept="audio/mpeg" multiple />
+      <div id="dropZone" class="drop-zone">
+        Drag & drop MP3 files here
+      </div>
+    </section>
+
+    <section class="player-panel">
+      <div class="track-info">
+        <div id="trackTitle">No track loaded</div>
+        <div id="trackStatus">Add files to start listening</div>
+      </div>
+
+      <audio id="audio" controls></audio>
+
+      <div class="controls">
+        <button id="prevBtn" disabled>⏮ Previous</button>
+        <button id="nextBtn" disabled>Next ⏭</button>
+      </div>
+
+      <div class="progress-row">
+        <span id="currentTime">00:00</span>
+        <input id="progressBar" type="range" min="0" max="100" value="0" />
+        <span id="duration">00:00</span>
+      </div>
+    </section>
+
+    <section class="playlist-panel">
+      <h2>Playlist</h2>
+      <ol id="playlist"></ol>
+    </section>
+  </main>
+
+  <script src="player.js"></script>
+</body>
+</html>

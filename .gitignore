@@ -1,0 +1,16 @@
+# Music files
+*.mp3
+*.wav
+*.flac
+*.m4a
+
+# Dependencies
+node_modules/
+*.log
+
+# Build output
+out/
+dist/
+
+# OS
+.DS_Store

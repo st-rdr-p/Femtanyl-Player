@@ -1,0 +1,52 @@
+{
+  "name": "femtanyl-player",
+  "version": "1.0.0",
+  "description": "Offline MP3 player for Femtanyl songs",
+  "main": "main.js",
+  "author": "st-rdr-p",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --remote-debugging-port=9222",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  },
+  "build": {
+    "appId": "com.femtanyl.player",
+    "productName": "Femtanyl Player",
+    "files": [
+      "main.js",
+      "index.html",
+      "style.css",
+      "player.js",
+      "music/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
